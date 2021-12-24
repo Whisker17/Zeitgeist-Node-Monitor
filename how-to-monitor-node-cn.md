@@ -224,7 +224,7 @@ sudo systemctl start grafana-server
 
 在完成以上所有配置之后，我们可以导入预先设计好的 [Dashboard](https://grafana.com/grafana/dashboards/15424) 对节点关键信息进行监控。
 
-1. 在菜单栏的 `Create` 一栏中选择 `Import` ，我们可以选择从 grafana.com 社区中利用 ID 进行导入或者通过此链接中的 [Json 文件](https://github.com/Whisker17/Zeitgeist-Node-Monitor/blob/main/Zeitgeist%20Node%20Monitor-1640048954974.json)进行导入。
+1. 在菜单栏的 `Create` 一栏中选择 `Import` ，我们可以选择从 grafana.com 社区中利用 ID 进行导入或者通过此链接中的 [Json 文件](https://github.com/Whisker17/Zeitgeist-Node-Monitor/blob/main/MonitorZeitgeistnodemetrics.json)进行导入。
 
 2. 选择 `Load` ，再次确认 `Prometheus` 这一栏没有选错，点击 `Import` 。
 

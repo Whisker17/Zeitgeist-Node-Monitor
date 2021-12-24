@@ -224,7 +224,7 @@ sudo systemctl start grafana-server
 
 After completing all the above configurations, we can import the [pre-designed Dashboard](https://grafana.com/grafana/dashboards/15424) to monitor the key information of the node.
 
-1. Select `Import` in the `Create` column of the menu bar, we can choose to import from the grafana.com community with ID or through the [Json file](https://github.com/Whisker17/Zeitgeist-Node-Monitor/blob/main/Zeitgeist%20Node%20Monitor-1640048954974.json) to import.
+1. Select `Import` in the `Create` column of the menu bar, we can choose to import from the grafana.com community with ID or through the [Json file](https://github.com/Whisker17/Zeitgeist-Node-Monitor/blob/main/zeitgeist-node-monitor.json) to import.
 
 2. Select `Load`, confirm again that the column of `Prometheus` is not selected wrong, and click `Import`.
 
