@@ -27,7 +27,7 @@
 
 ##  2. <a name='Prometheus'></a>安装 Prometheus 并配置环境
 
-我们采用 Prometheus 作为节点数据的采集工具
+我们采用 ![Prometheus](https://prometheus.io/docs/introduction/overview/) 作为节点数据的采集工具
 
 ###  2.1. <a name='Prometheus-1'></a>设置 Prometheus 环境
 
@@ -53,7 +53,7 @@
 
 ###  2.2. <a name='Prometheus-1'></a>安装 Prometheus
 
-1. 设置完环境后我们开始安装，大家可以通过官方 Github Repo 的 Releases 中查看最新版本
+1. 设置完环境后我们开始安装，大家可以通过官方 Github Repo 的 [Releases](https://github.com/prometheus/prometheus/releases) 中查看最新版本
 
    ```bash
    sudo apt-get update && apt-get upgrade
@@ -64,15 +64,7 @@
 
 2. 下载完成后当前路径文件夹将会有两个可执行文件以及两个文件夹：
 
-   **图片**
-
-   ```
-   object currentDirectory
-   note right of currentDirectory: consoles/
-   note right of currentDirectory: console_libraries/
-   note right of currentDirectory: prometheus
-   note right of currentDirectory: promtool
-   ```
+   ![](./imgs/textart.png)
 
 3. 将可执行文件复制到指定文件夹并修改所属权：
 
@@ -197,7 +189,7 @@ sudo -u prometheus /usr/local/bin/prometheus --config.file /etc/prometheus/prome
 
 ##  3. <a name='Grafana'></a>安装 Grafana 并配置环境
 
-我们使用 Grafana 作为节点信息的可视化工具，Grafana 将会捕捉 Prometheus 提供的数据并实时可视化输出，给节点运营商更直观的体验
+我们使用 ![Grafana](https://grafana.com/grafana/) 作为节点信息的可视化工具，Grafana 将会捕捉 Prometheus 提供的数据并实时可视化输出，给节点运营商更直观的体验
 
 ###  3.1. <a name='Grafana-1'></a>安装 Grafana
 
@@ -209,7 +201,7 @@ wget https://dl.grafana.com/oss/release/grafana_8.3.3_amd64.deb
 sudo dpkg -i grafana_8.3.3_amd64.deb
 ```
 
-具体的最新版本可以在 Grafana 官方网站上找到：https://grafana.com/grafana/download
+具体的[最新版本](https://grafana.com/grafana/download)可以在 Grafana 官方网站上找到
 
 ###  3.2. <a name='Grafana-1'></a>运行并将 Grafana 作为系统服务自动运行
 
@@ -226,14 +218,14 @@ sudo systemctl start grafana-server
 1. 在浏览器中输入以下 IP 并登陆：`http://127.0.0.1:3000/login` ，默认帐号密码均为 `admin` 。
 
 2. 在左边找到 `Configuration` 按钮，选择 `Data Sources` ，进入后选择添加数据源 `Add data source` 。
-3. 大家可以根据自己使用的数据源来进行选择，本文中我们选择的是 `Prometheus` 。
+3. 大家可以根据自己使用的数据源来进行选择，**本文中我们选择的是 `Prometheus` **。
 4. 设置数据源参数，将 `URL` 设置为 `http://localhost:9090` 即可，选择最下面的 `Save & Test` ，如果看到 `Data source is working` 则说明配置没有问题。
 
 ##  4. <a name='Zeitgeist'></a>监控 Zeitgeist 节点信息
 
-在完成以上所有配置之后，我们可以导入预先设计好的 Dashboard 对节点关键信息进行监控。
+在完成以上所有配置之后，我们可以导入预先设计好的 [Dashboard](https://grafana.com/grafana/dashboards/15424) 对节点关键信息进行监控。
 
-1. 在菜单栏的 `Create` 一栏中选择 `Import` ，我们可以选择从 [grafana.com 社区](https://grafana.com/grafana/dashboards/15424)中利用 ID 进行导入或者通过此链接中的 [Json 文件](https://github.com/Whisker17/Zeitgeist-Node-Monitor/blob/main/Zeitgeist%20Node%20Monitor-1640048954974.json)进行导入。
+1. 在菜单栏的 `Create` 一栏中选择 `Import` ，我们可以选择从 grafana.com 社区中利用 ID 进行导入或者通过此链接中的 [Json 文件](https://github.com/Whisker17/Zeitgeist-Node-Monitor/blob/main/Zeitgeist%20Node%20Monitor-1640048954974.json)进行导入。
 
 2. 选择 `Load` ，再次确认 `Prometheus` 这一栏没有选错，点击 `Import` 。
 
