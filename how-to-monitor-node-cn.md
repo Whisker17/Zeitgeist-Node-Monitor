@@ -27,7 +27,7 @@
 
 ##  2. <a name='Prometheus'></a>安装 Prometheus 并配置环境
 
-我们采用 ![Prometheus](https://prometheus.io/docs/introduction/overview/) 作为节点数据的采集工具
+我们采用 [Prometheus](https://prometheus.io/docs/introduction/overview/) 作为节点数据的采集工具
 
 ###  2.1. <a name='Prometheus-1'></a>设置 Prometheus 环境
 
@@ -189,7 +189,7 @@ sudo -u prometheus /usr/local/bin/prometheus --config.file /etc/prometheus/prome
 
 ##  3. <a name='Grafana'></a>安装 Grafana 并配置环境
 
-我们使用 ![Grafana](https://grafana.com/grafana/) 作为节点信息的可视化工具，Grafana 将会捕捉 Prometheus 提供的数据并实时可视化输出，给节点运营商更直观的体验
+我们使用 [Grafana](https://grafana.com/grafana/) 作为节点信息的可视化工具，Grafana 将会捕捉 Prometheus 提供的数据并实时可视化输出，给节点运营商更直观的体验
 
 ###  3.1. <a name='Grafana-1'></a>安装 Grafana
 
