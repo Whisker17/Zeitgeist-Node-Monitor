@@ -1,19 +1,20 @@
 # How to monitor your node
 
 <!-- vscode-markdown-toc -->
-* 1. [Prerequisites](#Prerequisites)
-* 2. [Install Prometheus and configure the environment](#InstallPrometheusandconfiguretheenvironment)
-	* 2.1. [Configure the Prometheus environment](#ConfigurethePrometheusenvironment)
-	* 2.2. [Install Prometheus](#InstallPrometheus)
-	* 2.3. [Configure Prometheus environment](#ConfigurePrometheusenvironment)
-	* 2.4. [Run Prometheus](#RunPrometheus)
-		* 2.4.1. [Set Prometheus as a system service and run it automatically](#SetPrometheusasasystemserviceandrunitautomatically)
-* 3. [Install Grafana and configure the environment](#InstallGrafanaandconfiguretheenvironment)
-	* 3.1. [Install Grafana](#InstallGrafana)
-	* 3.2. [Run and automatically run Grafana as a system service](#RunandautomaticallyrunGrafanaasasystemservice)
-	* 3.3. [Configure Grafana data source](#ConfigureGrafanadatasource)
-* 4. [Monitor Zeitgeist node metrics](#MonitorZeitgeistnodemetrics)
-* 5. [Reference](#Reference)
+
+- 1. [Prerequisites](#Prerequisites)
+- 2. [Install Prometheus and configure the environment](#InstallPrometheusandconfiguretheenvironment)
+  - 2.1. [Configure the Prometheus environment](#ConfigurethePrometheusenvironment)
+  - 2.2. [Install Prometheus](#InstallPrometheus)
+  - 2.3. [Configure Prometheus environment](#ConfigurePrometheusenvironment)
+  - 2.4. [Run Prometheus](#RunPrometheus)
+    - 2.4.1. [Set Prometheus as a system service and run it automatically](#SetPrometheusasasystemserviceandrunitautomatically)
+- 3. [Install Grafana and configure the environment](#InstallGrafanaandconfiguretheenvironment)
+  - 3.1. [Install Grafana](#InstallGrafana)
+  - 3.2. [Run and automatically run Grafana as a system service](#RunandautomaticallyrunGrafanaasasystemservice)
+  - 3.3. [Configure Grafana data source](#ConfigureGrafanadatasource)
+- 4. [Monitor Zeitgeist node metrics](#MonitorZeitgeistnodemetrics)
+- 5. [Reference](#Reference)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -21,16 +22,15 @@
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
 
-
-##  1. <a name='Prerequisites'></a>Prerequisites
+## 1. <a name='Prerequisites'></a>Prerequisites
 
 Prepare the node operating environment, specific information can follow [this article](https://docs.zeitgeist.pm/battery-station)
 
-##  2. <a name='InstallPrometheusandconfiguretheenvironment'></a>Install Prometheus and configure the environment
+## 2. <a name='InstallPrometheusandconfiguretheenvironment'></a>Install Prometheus and configure the environment
 
 We use [Prometheus](https://prometheus.io/docs/introduction/overview/) as the node data collection tool
 
-###  2.1. <a name='ConfigurethePrometheusenvironment'></a>Configure the Prometheus environment
+### 2.1. <a name='ConfigurethePrometheusenvironment'></a>Configure the Prometheus environment
 
 1. To prevent Prometheus from logging in, we need to set `--no-create-home` and create a user for Prometheus
 
@@ -52,7 +52,7 @@ We use [Prometheus](https://prometheus.io/docs/introduction/overview/) as the no
    sudo chown -R prometheus:prometheus /var/lib/prometheus
    ```
 
-###  2.2. <a name='InstallPrometheus'></a>Install Prometheus
+### 2.2. <a name='InstallPrometheus'></a>Install Prometheus
 
 1. After configuring the environment, we start the installation. You can check the latest version in the [Releases](https://github.com/prometheus/prometheus/releases) of the official Github Repo
 
@@ -103,13 +103,11 @@ We use [Prometheus](https://prometheus.io/docs/introduction/overview/) as the no
    sudo chown prometheus:prometheus /etc/prometheus/prometheus.yml
    ```
 
-   
-
 You can also choose to install through the official documentation
 
-https://prometheus.io/docs/prometheus/latest/installation/
+<https://prometheus.io/docs/prometheus/latest/installation/>
 
-###  2.3. <a name='ConfigurePrometheusenvironment'></a>Configure Prometheus environment
+### 2.3. <a name='ConfigurePrometheusenvironment'></a>Configure Prometheus environment
 
 After the installation is complete, we need to configure the Prometheus environment as follows:
 
@@ -139,7 +137,7 @@ scrape_configs:
       - targets: ["localhost:9616"]
 ```
 
-###  2.4. <a name='RunPrometheus'></a>Run Prometheus
+### 2.4. <a name='RunPrometheus'></a>Run Prometheus
 
 Run the following command in Terminal:
 
@@ -151,7 +149,7 @@ After the operation is successful, the relevant log will be printed out.
 
 Enter `http://127.0.0.1:9090/graph` in the browser to view and query related information
 
-####  2.4.1. <a name='SetPrometheusasasystemserviceandrunitautomatically'></a>Set Prometheus as a system service and run it automatically
+#### 2.4.1. <a name='SetPrometheusasasystemserviceandrunitautomatically'></a>Set Prometheus as a system service and run it automatically
 
 1. Create service file
 
@@ -166,7 +164,7 @@ Enter `http://127.0.0.1:9090/graph` in the browser to view and query related inf
      Description=Prometheus Monitoring
      Wants=network-online.target
      After=network-online.target
-   
+
    [Service]
      User=prometheus
      Group=prometheus
@@ -177,7 +175,7 @@ Enter `http://127.0.0.1:9090/graph` in the browser to view and query related inf
      --web.console.templates=/etc/prometheus/consoles \
      --web.console.libraries=/etc/prometheus/console_libraries
      ExecReload=/bin/kill -HUP $MAINPID
-   
+
    [Install]
      WantedBy=multi-user.target
    ```
@@ -188,11 +186,11 @@ Enter `http://127.0.0.1:9090/graph` in the browser to view and query related inf
    sudo systemctl daemon-reload && systemctl enable prometheus && systemctl start prometheus
    ```
 
-##  3. <a name='InstallGrafanaandconfiguretheenvironment'></a>Install Grafana and configure the environment
+## 3. <a name='InstallGrafanaandconfiguretheenvironment'></a>Install Grafana and configure the environment
 
 We use [Grafana](https://grafana.com/grafana/) as a visualization tool for node information. Grafana will capture the data provided by Prometheus and visualize the output in real time, giving node operators a more intuitive experience
 
-###  3.1. <a name='InstallGrafana'></a>Install Grafana
+### 3.1. <a name='InstallGrafana'></a>Install Grafana
 
 Enter in Terminal:
 
@@ -204,7 +202,7 @@ sudo dpkg -i grafana_8.3.3_amd64.deb
 
 The specific [latest version](https://grafana.com/grafana/download) can be found on the Grafana official website
 
-###  3.2. <a name='RunandautomaticallyrunGrafanaasasystemservice'></a>Run and automatically run Grafana as a system service
+### 3.2. <a name='RunandautomaticallyrunGrafanaasasystemservice'></a>Run and automatically run Grafana as a system service
 
 Enter in Terminal:
 
@@ -214,7 +212,7 @@ sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
 ```
 
-###  3.3. <a name='ConfigureGrafanadatasource'></a>Configure Grafana data source
+### 3.3. <a name='ConfigureGrafanadatasource'></a>Configure Grafana data source
 
 1. Enter the following IP in the browser and log in: `http://127.0.0.1:3000/login`, the default account and password are both `admin`.
 
@@ -222,7 +220,7 @@ sudo systemctl start grafana-server
 3. You can choose according to the data source you use. **In this article, we choose Prometheus.**
 4. Set the data source parameters, set the `URL` to `http://localhost:9090`, select the bottom `Save & Test`, if you see `Data source is working`, it means there is no problem with the configuration.
 
-##  4. <a name='MonitorZeitgeistnodemetrics'></a>Monitor Zeitgeist node metrics
+## 4. <a name='MonitorZeitgeistnodemetrics'></a>Monitor Zeitgeist node metrics
 
 After completing all the above configurations, we can import the [pre-designed Dashboard](https://grafana.com/grafana/dashboards/15424) to monitor the key information of the node.
 
@@ -237,9 +235,9 @@ After completing all the above configurations, we can import the [pre-designed D
    ```
 
 4. After waiting a few seconds, you will see the data update in the interface.
-   
+
    ![](./imgs/grafana.png)
 
-##  5. <a name='Reference'></a>Reference
+## 5. <a name='Reference'></a>Reference
 
 - [Monitor your node](https://wiki.polkadot.network/docs/maintain-guides-how-to-monitor-your-node)

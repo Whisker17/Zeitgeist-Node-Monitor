@@ -1,19 +1,20 @@
 # 如何监控节点信息
 
 <!-- vscode-markdown-toc -->
-* 1. [先决条件](#)
-* 2. [安装 Prometheus 并配置环境](#Prometheus)
-	* 2.1. [设置 Prometheus 环境](#Prometheus-1)
-	* 2.2. [安装 Prometheus](#Prometheus-1)
-	* 2.3. [配置 Prometheus 环境](#Prometheus-1)
-	* 2.4. [运行 Prometheus](#Prometheus-1)
-		* 2.4.1. [将 Prometheus 设置为系统服务并自动运行](#Prometheus-1)
-* 3. [安装 Grafana 并配置环境](#Grafana)
-	* 3.1. [安装 Grafana](#Grafana-1)
-	* 3.2. [运行并将 Grafana 作为系统服务自动运行](#Grafana-1)
-	* 3.3. [配置 Grafana 数据源](#Grafana-1)
-* 4. [监控 Zeitgeist 节点信息](#Zeitgeist)
-* 5. [Reference](#Reference)
+
+- 1. [先决条件](#Prerequisites)
+- 2. [安装 Prometheus 并配置环境](#InstallPrometheusandconfiguretheenvironment)
+  - 2.1. [设置 Prometheus 环境](#ConfigurethePrometheusenvironment)
+  - 2.2. [安装 Prometheus](#InstallPrometheus)
+  - 2.3. [配置 Prometheus 环境](#ConfigurePrometheusenvironment)
+  - 2.4. [运行 Prometheus](#RunPrometheus)
+    - 2.4.1. [将 Prometheus 设置为系统服务并自动运行](#SetPrometheusasasystemserviceandrunitautomatically)
+- 3. [安装 Grafana 并配置环境](#InstallGrafanaandconfiguretheenvironment)
+  - 3.1. [安装 Grafana](#InstallGrafana)
+  - 3.2. [运行并将 Grafana 作为系统服务自动运行](#RunandautomaticallyrunGrafanaasasystemservice)
+  - 3.3. [配置 Grafana 数据源](#ConfigureGrafanadatasource)
+- 4. [监控 Zeitgeist 节点信息](#MonitorZeitgeistnodemetrics)
+- 5. [Reference](#Reference)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -21,15 +22,15 @@
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
 
-##  1. <a name=''></a>先决条件
+## 1. <a name='Prerequisites'></a>先决条件
 
 准备好节点运行环境，具体信息可以遵循[这篇文章](https://docs.zeitgeist.pm/battery-station)
 
-##  2. <a name='Prometheus'></a>安装 Prometheus 并配置环境
+## 2. <a name='InstallPrometheusandconfiguretheenvironment'></a>安装 Prometheus 并配置环境
 
 我们采用 [Prometheus](https://prometheus.io/docs/introduction/overview/) 作为节点数据的采集工具
 
-###  2.1. <a name='Prometheus-1'></a>设置 Prometheus 环境
+### 2.1. <a name='ConfigurethePrometheusenvironment'></a>设置 Prometheus 环境
 
 1. 为防止 Prometheus 登陆，我们需要设置 `--no-create-home` 同时为 Prometheus 创建用户
 
@@ -51,7 +52,7 @@
    sudo chown -R prometheus:prometheus /var/lib/prometheus
    ```
 
-###  2.2. <a name='Prometheus-1'></a>安装 Prometheus
+### 2.2. <a name='InstallPrometheus'></a>安装 Prometheus
 
 1. 设置完环境后我们开始安装，大家可以通过官方 Github Repo 的 [Releases](https://github.com/prometheus/prometheus/releases) 中查看最新版本
 
@@ -102,13 +103,11 @@
    sudo chown prometheus:prometheus /etc/prometheus/prometheus.yml
    ```
 
-   
-
 你也可以选择通过官方文档进行安装
 
 https://prometheus.io/docs/prometheus/latest/installation/
 
-###  2.3. <a name='Prometheus-1'></a>配置 Prometheus 环境
+### 2.3. <a name='ConfigurePrometheusenvironment'></a>配置 Prometheus 环境
 
 安装完成之后，我们需要对 Prometheus 的环境进行配置，操作如下：
 
@@ -138,7 +137,7 @@ scrape_configs:
       - targets: ["localhost:9616"]
 ```
 
-###  2.4. <a name='Prometheus-1'></a>运行 Prometheus
+### 2.4. <a name='RunPrometheus'></a>运行 Prometheus
 
 在 Terminal 中运行下面的命令：
 
@@ -150,7 +149,7 @@ sudo -u prometheus /usr/local/bin/prometheus --config.file /etc/prometheus/prome
 
 在浏览器中输入 `http://127.0.0.1:9090/graph` 可以查看以及查询相关信息
 
-####  2.4.1. <a name='Prometheus-1'></a>将 Prometheus 设置为系统服务并自动运行
+#### 2.4.1. <a name='SetPrometheusasasystemserviceandrunitautomatically'></a>将 Prometheus 设置为系统服务并自动运行
 
 1. 创建 service 文件
 
@@ -165,7 +164,7 @@ sudo -u prometheus /usr/local/bin/prometheus --config.file /etc/prometheus/prome
      Description=Prometheus Monitoring
      Wants=network-online.target
      After=network-online.target
-   
+
    [Service]
      User=prometheus
      Group=prometheus
@@ -176,7 +175,7 @@ sudo -u prometheus /usr/local/bin/prometheus --config.file /etc/prometheus/prome
      --web.console.templates=/etc/prometheus/consoles \
      --web.console.libraries=/etc/prometheus/console_libraries
      ExecReload=/bin/kill -HUP $MAINPID
-   
+
    [Install]
      WantedBy=multi-user.target
    ```
@@ -187,11 +186,11 @@ sudo -u prometheus /usr/local/bin/prometheus --config.file /etc/prometheus/prome
    sudo systemctl daemon-reload && systemctl enable prometheus && systemctl start prometheus
    ```
 
-##  3. <a name='Grafana'></a>安装 Grafana 并配置环境
+## 3. <a name='InstallGrafanaandconfiguretheenvironment'></a>安装 Grafana 并配置环境
 
 我们使用 [Grafana](https://grafana.com/grafana/) 作为节点信息的可视化工具，Grafana 将会捕捉 Prometheus 提供的数据并实时可视化输出，给节点运营商更直观的体验
 
-###  3.1. <a name='Grafana-1'></a>安装 Grafana
+### 3.1. <a name='InstallGrafana'></a>安装 Grafana
 
 在 Terminal 中输入：
 
@@ -203,7 +202,7 @@ sudo dpkg -i grafana_8.3.3_amd64.deb
 
 具体的[最新版本](https://grafana.com/grafana/download)可以在 Grafana 官方网站上找到
 
-###  3.2. <a name='Grafana-1'></a>运行并将 Grafana 作为系统服务自动运行
+### 3.2. <a name='RunandautomaticallyrunGrafanaasasystemservice'></a>运行并将 Grafana 作为系统服务自动运行
 
 在 Terminal 中输入：
 
@@ -213,7 +212,7 @@ sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
 ```
 
-###  3.3. <a name='Grafana-1'></a>配置 Grafana 数据源
+### 3.3. <a name='ConfigureGrafanadatasource'></a>配置 Grafana 数据源
 
 1. 在浏览器中输入以下 IP 并登陆：`http://127.0.0.1:3000/login` ，默认帐号密码均为 `admin` 。
 
@@ -221,7 +220,7 @@ sudo systemctl start grafana-server
 3. 大家可以根据自己使用的数据源来进行选择，**本文中我们选择的是 `Prometheus` **。
 4. 设置数据源参数，将 `URL` 设置为 `http://localhost:9090` 即可，选择最下面的 `Save & Test` ，如果看到 `Data source is working` 则说明配置没有问题。
 
-##  4. <a name='Zeitgeist'></a>监控 Zeitgeist 节点信息
+## 4. <a name='MonitorZeitgeistnodemetrics'></a>监控 Zeitgeist 节点信息
 
 在完成以上所有配置之后，我们可以导入预先设计好的 [Dashboard](https://grafana.com/grafana/dashboards/15424) 对节点关键信息进行监控。
 
@@ -236,9 +235,9 @@ sudo systemctl start grafana-server
    ```
 
 4. 等待几秒后，您将会在界面中看到数据的更新。
-   
+
    ![](./imgs/grafana.png)
 
-##  5. <a name='Reference'></a>Reference
+## 5. <a name='Reference'></a>Reference
 
 - [Monitor your node](https://wiki.polkadot.network/docs/maintain-guides-how-to-monitor-your-node)
