@@ -2,8 +2,6 @@
 
 Zeitgeist can currently support a large amount of data information monitoring. The current template selects some of the more commonly used ones. If you need to customize it yourself, you can refer to the following metrics to modify.
 
-
-
 - **polkadot_authority_discovery_amount_external_addresses_last_published**
 
   - **Info：** Number of external addresses published when authority discovery last published addresses.
@@ -12,7 +10,7 @@ Zeitgeist can currently support a large amount of data information monitoring. T
 
 - **polkadot_authority_discovery_authority_address_requests_pending**
 
-  - **Info：** Number of pending authority address requests. 
+  - **Info：** Number of pending authority address requests.
 
   - **Type：** gauge
 
@@ -60,15 +58,15 @@ Zeitgeist can currently support a large amount of data information monitoring. T
 
 - **polkadot_block_verification_and_import_time_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
 - **polkadot_block_verification_and_import_time_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
 - **polkadot_build_info**
 
@@ -132,15 +130,15 @@ Zeitgeist can currently support a large amount of data information monitoring. T
 
 - **polkadot_justification_import_time_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
 - **polkadot_justification_import_time_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
 - **polkadot_network_gossip_expired_messages_total**
 
@@ -148,2288 +146,1244 @@ Zeitgeist can currently support a large amount of data information monitoring. T
 
   - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_network_gossip_registered_messages_total**
 
-  - **Info：** 
+  - **Info：** Number of registered messages by the gossip service.
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_node_roles**
 
-  - **Info：** 
+  - **Info：** The roles the node is running as
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_number_leaves**
 
-  - **Info：** 
+  - **Info：** Number of known chain leaves (aka forks)
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_activated_heads_total**
 
-  - **Info：** 
+  - **Info：** Number of activated heads.
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_approval_checking_finality_lag**
 
-  - **Info：** 
+  - **Info：** How far behind the head of the chain the Approval Checking protocol wants to vote
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_approvals_blockapproval_time_ticks_bucket**
 
-  - **Info：** 
+  - **Info：** Number of ticks (500ms) to approve blocks.
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_approvals_blockapproval_time_ticks_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_approvals_blockapproval_time_ticks_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_approvals_candidate_approval_time_ticks_bucket**
 
-  - **Info：** 
+  - **Info：** Number of ticks (500ms) to approve candidates.
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_approvals_candidate_approval_time_ticks_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_approvals_candidate_approval_time_ticks_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_approvals_imported_total**
 
-  - **Info：** 
+  - **Info：** Number of valid approvals imported locally or from other peers.
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_approvals_no_shows_total**
 
-  - **Info：** 
+  - **Info：** Number of assignments which became no-shows in the approval voting subsystem
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_approvals_wakeups_total**
 
-  - **Info：** 
+  - **Info：** Number of times we woke up to process a candidate in the approval voting subsystem
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_assignments_imported_total**
 
-  - **Info：** 
+  - **Info：** Number of valid assignments imported locally or from other peers.
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_assignments_produced_bucket**
 
-  - **Info：** 
+  - **Info：** Assignments and tranches produced by the approval voting subsystem
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_assignments_produced_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_assignments_produced_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_av_store_block_activated_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `av_store::process_block_activated`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_av_store_block_activated_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_av_store_block_activated_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_av_store_get_chunk_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent fetching requested chunks.
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_av_store_get_chunk_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_av_store_get_chunk_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_av_store_process_block_finalized_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `av_store::process_block_finalized`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_av_store_process_block_finalized_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_av_store_process_block_finalized_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_av_store_process_message_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `av_store::process_message`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_av_store_process_message_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_av_store_process_message_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_av_store_pruning_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `av_store::prune_all`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_av_store_pruning_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_av_store_pruning_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_av_store_store_available_data_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `av_store::store_available_data`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_av_store_store_available_data_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_av_store_store_available_data_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_av_store_store_chunk_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `av_store::store_chunk`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_av_store_store_chunk_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_av_store_store_chunk_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_bitfield_distribution_active_leaves_update_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `bitfield_distribution::active_leaves_update`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_bitfield_distribution_active_leaves_update_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_bitfield_distribution_active_leaves_update_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_bitfield_distribution_handle_bitfield_distribution_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `bitfield_distribution::handle_bitfield_distribution`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_bitfield_distribution_handle_bitfield_distribution_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_bitfield_distribution_handle_bitfield_distribution_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_bitfield_distribution_handle_network_msg_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `bitfield_distribution::handle_network_msg`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_bitfield_distribution_handle_network_msg_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_bitfield_distribution_handle_network_msg_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_bitfield_signing_run_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `bitfield_signing::run`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_bitfield_signing_run_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_bitfield_signing_run_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_bitfields_signed_total**
 
-  - **Info：** 
+  - **Info：** Number of bitfields signed.
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_candidate_backing_candidates_seconded_total**
 
-  - **Info：** 
+  - **Info：** Number of candidates seconded.
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_candidate_backing_get_backed_candidates_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `candidate_backing::get_backed_candidates`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_candidate_backing_get_backed_candidates_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_candidate_backing_get_backed_candidates_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_candidate_backing_process_second_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `candidate_backing::process_second`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_candidate_backing_process_second_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_candidate_backing_process_second_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_candidate_backing_process_statement_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `candidate_backing::process_statement`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_candidate_backing_process_statement_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_candidate_backing_process_statement_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_candidate_backing_signed_statements_total**
 
-  - **Info：** 
+  - **Info：** Number of statements signed.
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_candidate_validation_validate_candidate_exhaustive_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `candidate_validation::validate_candidate_exhaustive`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_candidate_validation_validate_candidate_exhaustive_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_candidate_validation_validate_candidate_exhaustive_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_candidate_validation_validate_from_chain_state_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `candidate_validation::validate_from_chain_state`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_candidate_validation_validate_from_chain_state_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_candidate_validation_validate_from_chain_state_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_candidate_validation_validate_from_exhaustive_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `candidate_validation::validate_from_exhaustive`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_candidate_validation_validate_from_exhaustive_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_candidate_validation_validate_from_exhaustive_count**
 
-  - **Info：** 
+  - **Info：** Time spent within `chain_api::ancestors`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_chain_api_ancestors_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_chain_api_ancestors_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_chain_api_block_headers_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `chain_api::block_headers`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_chain_api_block_headers_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_chain_api_block_headers_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_chain_api_block_number_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `chain_api::block_number`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_chain_api_block_number_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_chain_api_block_number_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_chain_api_block_weight_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `chain_api::block_weight`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_chain_api_block_weight_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_chain_api_block_weight_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_chain_api_finalized_block_hash_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `chain_api::finalized_block_hash`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_chain_api_finalized_block_hash_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_chain_api_finalized_block_hash_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_chain_api_finalized_block_number_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `chain_api::finalized_block_number`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_chain_api_finalized_block_number_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_chain_api_finalized_block_number_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_chain_api_requests_total**
 
-  - **Info：** 
+  - **Info：** Number of Chain API requests served.
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_collation_advertisements_made_total**
 
-  - **Info：** 
+  - **Info：** A number of collation advertisements sent to validators.
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_collation_generation_new_activations_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within fn handle_new_activations
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_collation_generation_new_activations_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_collation_generation_new_activations_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_collation_generation_per_availability_core_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent handling a particular availability core for a relay parent in fn `handle_new_activations`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_collation_generation_per_availability_core_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_collation_generation_per_availability_core_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_collation_generation_per_relay_parent_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent handling a particular relay parent within fn `handle_new_activations`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_collation_generation_per_relay_parent_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_collation_generation_per_relay_parent_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_collations_generated_total**
 
-  - **Info：** 
+  - **Info：** Number of collations generated.
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_collations_sent_requested_total**
 
-  - **Info：** 
+  - **Info：** A number of collations requested to be sent to validators.
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_collations_sent_total**
 
-  - **Info：** 
+  - **Info：** A number of collations sent to validators.
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_collator_protocol_collator_process_msg_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `collator_protocol_collator::process_msg`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_collator_protocol_collator_process_msg_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_collator_protocol_collator_process_msg_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_deactivated_heads_total**
 
-  - **Info：** 
+  - **Info：** Number of deactivated heads.
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_dispute_distribution_received_requests**
 
-  - **Info：** 
+  - **Info：** Total number of received dispute requests.
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_disputes_finality_lag**
 
-  - **Info：** 
+  - **Info：** How far behind the head of the chain the Disputes protocol wants to vote
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_fetch_retries_total**
 
-  - **Info：** 
+  - **Info：** Number of times we did not succeed in fetching a chunk and needed to try more backers.
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_gossipped_own_availabilty_bitfields_total**
 
-  - **Info：** 
+  - **Info：** Number of own availability bitfields sent to other peers.
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_imported_candidates_total**
 
-  - **Info：** 
+  - **Info：** Number of candidates imported by the approval voting subsystem
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_messages_relayed_total**
 
-  - **Info：** 
+  - **Info：** Number of messages relayed by Overseer.
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_notification_bytes_sent_total**
 
-  - **Info：** 
+  - **Info：** The number of bytes sent on a parachain notification protocol
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_notifications_sent_total**
 
-  - **Info：** 
+  - **Info：** The number of notifications sent on a parachain protocol
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_overseer_signals_received**
 
-  - **Info：** 
+  - **Info：** Number of signals received by subsystems from overseer
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_overseer_signals_sent**
 
-  - **Info：** 
+  - **Info：** Number of signals sent by overseer to subsystems
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_provisioner_provisionable_data_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `provisioner::provisionable_data`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_provisioner_provisionable_data_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_provisioner_provisionable_data_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_provisioner_request_inherent_data_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `provisioner::request_inherent_data`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_provisioner_request_inherent_data_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_provisioner_request_inherent_data_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_received_availability_chunks_total**
 
-  - **Info：** 
+  - **Info：** Number of availability chunks received.
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_received_availabilty_bitfields_total**
 
-  - **Info：** 
+  - **Info：** Number of valid availability bitfields received from other peers.
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_runtime_api_make_runtime_api_request_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `runtime_api::make_runtime_api_request`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_runtime_api_make_runtime_api_request_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_runtime_api_make_runtime_api_request_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_runtime_api_requests_total**
 
-  - **Info：** 
+  - **Info：** Number of Runtime API requests served.
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_statement_distribution_active_leaves_update_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `statement_distribution::active_leaves_update`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_statement_distribution_active_leaves_update_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_statement_distribution_active_leaves_update_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_statement_distribution_network_bridge_update_v1_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `statement_distribution::network_bridge_update_v1`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_statement_distribution_network_bridge_update_v1_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_statement_distribution_network_bridge_update_v1_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_statement_distribution_sent_requests_total**
 
-  - **Info：** 
+  - **Info：** Number of large statement fetching requests sent.
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_statement_distribution_share_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within `statement_distribution::share`
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_statement_distribution_share_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_statement_distribution_share_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_statements_distributed_total**
 
-  - **Info：** 
+  - **Info：** Number of candidate validity statements distributed to other peers.
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_subsystem_bounded_received**
 
-  - **Info：** 
+  - **Info：** Number of elements received by subsystems' bounded queues
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_subsystem_bounded_sent**
 
-  - **Info：** 
+  - **Info：** Number of elements sent to subsystems' bounded queues
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_subsystem_unbounded_received**
 
-  - **Info：** 
+  - **Info：** Number of elements received by subsystems' unbounded queues
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_subsystem_unbounded_sent**
 
-  - **Info：** 
+  - **Info：** Number of elements sent to subsystems' unbounded queues
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_time_approval_db_transaction_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent writing an approval db transaction.
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_time_approval_db_transaction_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_time_approval_db_transaction_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_time_awaiting_approval_voting_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent awaiting a reply from the Approval Voting Subsystem.
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_time_awaiting_approval_voting_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_time_awaiting_approval_voting_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_time_import_pending_now_known_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent on importing pending assignments and approvals.
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_time_import_pending_now_known_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_time_import_pending_now_known_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_time_recover_and_approve_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent recovering and approving data in approval voting
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_time_recover_and_approve_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_time_recover_and_approve_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_time_unify_with_peer_bucket**
 
-  - **Info：** 
+  - **Info：** Time spent within fn `unify_with_peer`.
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_time_unify_with_peer_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_time_unify_with_peer_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_parachain_unified_with_peer_total**
 
-  - **Info：** 
+  - **Info：** Number of times `unify_with_peer` is called.
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_process_start_time_seconds**
 
-  - **Info：** 
+  - **Info：** Number of seconds between the UNIX epoch and the moment the process started
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_ready_transactions_number**
 
-  - **Info：** 
+  - **Info：** Number of transactions in the ready queue
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_state_cache_bytes**
 
-  - **Info：** 
+  - **Info：** State cache size in bytes
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_state_db_cache_bytes**
 
-  - **Info：** 
+  - **Info：** State DB cache in bytes
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_libp2p_connections_closed_total**
 
-  - **Info：** 
+  - **Info：** Total number of connections closed, by direction and reason
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_libp2p_connections_opened_total**
 
-  - **Info：** 
+  - **Info：** Total number of connections opened by direction
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_libp2p_distinct_peers_connections_closed_total**
 
-  - **Info：** 
+  - **Info：** Total number of connections closed with distinct peers
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_libp2p_distinct_peers_connections_opened_total**
 
-  - **Info：** 
+  - **Info：** Total number of connections opened with distinct peers
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_libp2p_incoming_connections_total**
 
-  - **Info：** 
+  - **Info：** Total number of incoming connections on the listening sockets
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_libp2p_is_major_syncing**
 
-  - **Info：** 
+  - **Info：** Whether the node is performing a major sync or not.
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_libp2p_kademlia_query_duration_bucket**
 
-  - **Info：** 
+  - **Info：** Duration of Kademlia queries per query type
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_libp2p_kademlia_query_duration_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_libp2p_kademlia_query_duration_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_libp2p_kademlia_random_queries_total**
 
-  - **Info：** 
+  - **Info：** Number of random Kademlia queries started
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_libp2p_kademlia_records_count**
 
-  - **Info：** 
+  - **Info：** Number of records in the Kademlia records store
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_libp2p_kademlia_records_sizes_total**
 
-  - **Info：** 
+  - **Info：** Total size of all the records in the Kademlia records store
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_libp2p_kbuckets_num_nodes**
 
-  - **Info：** 
+  - **Info：** Number of nodes per kbucket per Kademlia instance
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_libp2p_listeners_errors_total**
 
-  - **Info：** 
+  - **Info：** Total number of non-fatal errors reported by a listener
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_libp2p_listeners_local_addresses**
 
-  - **Info：** 
+  - **Info：** Number of local addresses we're listening on
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_libp2p_network_bytes_total**
 
-  - **Info：** 
+  - **Info：** Total bandwidth usage
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_libp2p_out_events_events_total**
 
-  - **Info：** 
+  - **Info：** Number of broadcast network events that have been sent or received across all channels
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_libp2p_out_events_num_channels**
 
-  - **Info：** 
+  - **Info：** Number of internal active channels that broadcast network events
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_libp2p_peers_count**
 
-  - **Info：** 
+  - **Info：** Number of connected peers
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_libp2p_peerset_num_discovered**
 
-  - **Info：** 
+  - **Info：** Number of nodes stored in the peerset manager
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_libp2p_peerset_num_requested**
 
-  - **Info：** 
+  - **Info：** Number of nodes that the peerset manager wants us to be connected to
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_libp2p_pending_connections**
 
-  - **Info：** 
+  - **Info：** Number of connections in the process of being established
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_libp2p_pending_connections_errors_total**
 
-  - **Info：** 
+  - **Info：** Total number of pending connection errors
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_txpool_block_transactions_pruned**
 
-  - **Info：** 
+  - **Info：** Total number of transactions that was requested to be pruned by block events
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_txpool_block_transactions_resubmitted**
 
-  - **Info：** 
+  - **Info：** Total number of transactions that was requested to be resubmitted by block events
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_txpool_submitted_transactions**
 
-  - **Info：** 
+  - **Info：** Total number of transactions submitted
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_txpool_validations_finished**
 
-  - **Info：** 
+  - **Info：** Total number of transactions that finished validation
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_txpool_validations_invalid**
 
-  - **Info：** 
+  - **Info：** Total number of transactions that were removed from the pool as invalid
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sub_txpool_validations_scheduled**
 
-  - **Info：** 
+  - **Info：** Total number of transactions scheduled for validation
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sync_extra_justifications**
 
-  - **Info：** 
+  - **Info：** Number of extra justifications requests
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sync_fork_targets**
 
-  - **Info：** 
+  - **Info：** Number of fork sync targets
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sync_peers**
 
-  - **Info：** 
+  - **Info：** Number of peers we sync with
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sync_propagated_transactions**
 
-  - **Info：** 
+  - **Info：** Number of transactions propagated to at least one peer
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_sync_queued_blocks**
 
-  - **Info：** 
+  - **Info：** Number of blocks in import queue
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_tasks_ended_total**
 
-  - **Info：** 
+  - **Info：** Total number of tasks for which Future::poll has returned Ready(()) or panicked
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_tasks_polling_duration_bucket**
 
-  - **Info：** 
+  - **Info：** Duration in seconds of each invocation of Future::poll
 
-  - **Type：** 
+  - **Type：** histogram
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_tasks_polling_duration_sum**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_tasks_polling_duration_count**
 
-  - **Info：** 
+  - **Info：**
 
-  - **Type：** 
+  - **Type：**
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_tasks_polling_started_total**
 
-  - **Info：** 
+  - **Info：** Total number of times we started invoking Future::poll
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_tasks_spawned_total**
 
-  - **Info：** 
+  - **Info：** Total number of tasks that have been spawned on the Service
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_tokio_threads_alive**
 
-  - **Info：** 
+  - **Info：** Number of threads alive right now
 
-  - **Type：** 
+  - **Type：** gauge
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_tokio_threads_total**
 
-  - **Info：** 
+  - **Info：** Total number of threads created
 
-  - **Type：** 
+  - **Type：** counter
 
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
+- **polkadot_unbounded_channel_len**
 
-  - **Info：** 
+  - **Info：** Items in each mpsc::unbounded instance
 
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
-
-- **polkadot_authority_discovery_amount_external_addresses_last_published**
-
-  - **Info：** 
-
-  - **Type：** 
+  - **Type：** counter
