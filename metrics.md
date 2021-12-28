@@ -2,7 +2,25 @@
 
 Zeitgeist can currently support a large amount of data information monitoring. The current template selects some of the more commonly used ones. If you need to customize it yourself, you can refer to the following metrics to modify.
 
-## Info
+> Tips: subcommand means that the function can also view more information through subcommands.
+
+<!-- vscode-markdown-toc -->
+
+- 1. [Info](#Info)
+- 2. [Interactive Information](#InteractiveInformation)
+- 3. [Storage](#Storage)
+- 4. [Performance](#Performance)
+- 5. [Errors](#Errors)
+
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
+
+## 1. <a name='Info'></a>Info
+
+This part of the function contains some basic information of the local node.
 
 - **polkadot_block_height**
 
@@ -40,7 +58,9 @@ Zeitgeist can currently support a large amount of data information monitoring. T
 
   - **Type:** counter
 
-## Interactive Information
+## 2. <a name='InteractiveInformation'></a>Interactive Information
+
+The functions in Interactive Information can be used to query the connection between nodes and the network and some consensus conditions.
 
 - **polkadot_authority_discovery_amount_external_addresses_last_published**
 
@@ -552,7 +572,9 @@ Zeitgeist can currently support a large amount of data information monitoring. T
 
   - **Type:** gauge
 
-## Storage
+## 3. <a name='Storage'></a>Storage
+
+The functions in Storage support querying node storage related information.
 
 - **polkadot_database_cache_bytes**
 
@@ -578,7 +600,9 @@ Zeitgeist can currently support a large amount of data information monitoring. T
 
   - **Type:** gauge
 
-## Performance
+## 4. <a name='Performance'></a>Performance
+
+Performance related functions can show the performance status of the node, including function call time, subsystem interaction status and task status.
 
 - **polkadot_parachain_av_store_block_activated_bucket**
 
@@ -1120,7 +1144,9 @@ Zeitgeist can currently support a large amount of data information monitoring. T
 
   - **Type:** counter
 
-## Errors
+## 5. <a name='Errors'></a>Errors
+
+The functions in Errors can help monitor error messages during node operation.
 
 - **polkadot_sub_libp2p_listeners_errors_total**
 
